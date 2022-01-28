@@ -1,7 +1,17 @@
-h3 {
-    font-size: 1em;
+.movie-hero {
+    border-bottom: 1px solid var(--primaryColor);
+    background-position: right -200px top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.moviedetails {
-    background-size: cover;
+.movie-hero .custom-bg {
+    background-image: linear-gradient(to right, rgba(10.20%, 2.75%, 7.45%, 1.00) 150px, rgba(10.20%, 2.75%, 7.45%, 0.84) 100%);
 }
+
+.movie-summary {
+    color: white;
+}
+
+
+

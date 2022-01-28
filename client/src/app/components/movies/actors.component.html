@@ -1,26 +1,22 @@
-<h3>Actores</h3>
-
-<!--
- <div class="row">
-        <div class="col-lg-3 mb-3 d-flex align-items-stretch" *ngFor="let actor of actorsMovie">
-            <div class="card">
+<div class="container mt-4">
+<h3>Actores</h3>    
+    <div class="row overflow-auto flex-row flex-nowrap pb-4">
+        <div class="col-2 d-flex align-items-stretch" *ngFor="let actor of actorsMovie">
+            <div class="card actor-card">
                 <img src="https://image.tmdb.org/t/p/w500/{{actor.profile_path}}" class="card-img-top">
-                <div class="card-body ">
-                    <p class="card-text">{{ actor.name }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <small class="text-muted">{{actor.character}}</small>
-                    </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{ actor.name }}</h5>
+                  <p class="card-text">{{actor.character}}</p>
                 </div>
             </div>
         </div>
     </div>
+</div> 
 
-
--->
+<!-- 
 <section id="Reparto">
     <div class="container-fluid">
         <div class="overflow-auto row flex-row flex-nowrap mt-4 pb-4 pt-2 align-items-stretch">
-            <!--overflow-auto hace que podamos monernos por el elemento sin mover toda la vista -->
 
             <div class="col-2 d-flex " *ngFor="let actor of actorsMovie">
                 <div class="card">
@@ -37,3 +33,4 @@
         </div>
     </div>
 </section>
+-->

@@ -1,13 +1,17 @@
-<div class="container">
-    <div class="row">
-        <div class="col-2">
-            <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
-        </div>
-        <div class="col">
-            <div class="justify-content-end py-5">
-                <h2>{{movie.title}} ({{ movie.release_date | date: 'yyyy' }})</h2>
-                <h3>Vista General</h3>
-                <p class="overview">{{movie.overview}}</p>
+<div class="movie-hero" style="background-image: url(https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }});">
+    <div class="custom-bg">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-3">
+                    <img class="img-fluid rounded" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}">
+                </div>
+                <div class="col-9">
+                    <div class="movie-summary">
+                        <h2>{{movie.title}} ({{ movie.release_date | date: 'yyyy' }})</h2>
+                        <h3>Vista General</h3>
+                        <p class="overview">{{movie.overview}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -15,4 +19,4 @@
 
 
 <app-actors [movieId]='id'></app-actors>
-<app-similar-movies [movieId]='id'></app-similar-movies>
+<!-- <app-similar-movies [movieId]='id'></app-similar-movies> -->

@@ -9,17 +9,13 @@ import { MoviesService } from 'src/app/services/movies.service';
 export class ActorsComponent implements OnInit {
 
   @Input() movieId!: number; 
-  actorsMovie:any = []
+  actorsMovie:any = [];
 
   constructor( private movieService:MoviesService) { }
 
   ngOnInit(): void {
-    console.log(this.movieId);
     this.movieService.getActorsMovie(this.movieId).subscribe(data => {
-      this.actorsMovie = data["cast"];
-      console.log(this.actorsMovie);
-      
+      this.actorsMovie = data["cast"].slice(0, 10);
    }) 
  }
-
 }

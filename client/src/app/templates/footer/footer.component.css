@@ -1,0 +1,7 @@
+.custom-footer {
+    background-color: #042541;
+}
+
+.custom-footer a, .custom-footer p, .custom-footer .text-uppercase {
+    color: white;
+}
