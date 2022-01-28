@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3 mb-3 d-flex align-items-stretch" *ngFor="let movie of movies">
+        <div class="card">
+          <span (click)="viewMovie(movie.id)">
+            <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" class="card-img-top">
+          </span>
+          <div class="card-body ">
+            <p class="card-text">{{ movie.title }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{ movie.release_date }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

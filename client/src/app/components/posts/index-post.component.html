@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h3>Lista de Noticias</h3>
+  <a href="#" routerLink="/post/new/" class="btn btn-success">Crear noticia</a>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts">
+          <th scope="row">{{ post._id }}</th>
+          <td>{{ post.heading }}</td>
+          <td>{{ post.content }}</td>
+          <td>
+            <a href="#" [routerLink]="['/post/', post._id, 'edit']" class="btn btn-primary">Edit</a>
+            <button type="button" (click)="deletePost(post._id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Crear Noticia</h1>
+  
+    <a href="#" routerLink="/posts" class="btn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="heading">Titulo:</label>
+            <input formControlName="heading" id="heading" type="text" class="form-control">
+            <div *ngIf="f['heading'].touched && f['heading'].invalid" class="alert alert-danger">
+                <div *ngIf="f['heading'].errors && f['heading'].errors['required']">El titulo es obligatorio.</div>
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="content">Contenido</label>
+            <textarea formControlName="content" id="content" type="text" class="form-control">
+            </textarea>
+            <div *ngIf="f['content'].touched && f['content'].invalid" class="alert alert-danger">
+                <div *ngIf="f['content'].errors && f['content'].errors['required']">El contenido es obligatorio.</div>
+            </div>
+        </div>
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Guardar</button>
+    </form>
+</div>

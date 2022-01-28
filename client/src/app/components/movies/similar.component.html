@@ -1,0 +1,15 @@
+<section id="Reparto">
+    <div class="container-fluid">
+        <div class="overflow-auto row flex-row flex-nowrap mt-4 pb-4 pt-2 align-items-stretch">
+            <!--overflow-auto hace que podamos monernos por el elemento sin mover toda la vista -->
+
+            <div class="col-2 d-flex " *ngFor="let similarMovie of similarMovies">
+                <div class="card d-flex ">
+                    <img src="https://image.tmdb.org/t/p/w500/{{similarMovie.poster_path}}" class="card-img-top">
+                    <p class="fw-bold text-center">{{ similarMovie.title }}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
